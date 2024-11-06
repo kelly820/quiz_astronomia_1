@@ -1,0 +1,175 @@
+/* Estilos básicos para body e html */
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-image: url('https://i.pinimg.com/originals/a0/6e/95/a06e951759316c0f6fa926fcaf923888.gif'); 
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: #ffffff;
+    flex-direction: column;
+}
+
+
+
+   
+
+/* Contêiner principal centralizado */
+.container {
+    text-align: center;
+    max-width: 800px;
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(42, 38, 38, 0.8); /* Leve fundo para destaque */
+}
+
+/* Navegação */
+nav{
+    backdrop-filter:blur(45px);
+    top: 0;
+    width: 100%;
+    
+    position: fixed;
+    box-shadow: 3px 3px 5px rgb(0,0,0, 0.1);
+
+}
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+nav li{
+    height: 50px;
+    list-style: none;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    font-size: 22px;
+    font-family: Poppins;
+    font-weight: 300;
+    margin-left: -10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    transform: color 2s;
+}
+
+nav a:hover {
+    background-color: #000000;
+    border: 1px solid #ffffff;
+    border-radius: 30px;
+    color:white;
+  }
+ 
+
+
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top:0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(42, 38, 38, 0.773);
+    backdrop-filter: blur(100px);
+    box-shadow: 3px 3px 5px rgb(0,0,0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a {
+    width: 100%;
+
+}
+.menu-button{
+    display: none;
+}
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(42, 38, 38, 0.9);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Botão, Input e outros estilos */
+button {
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+}
+
+input {
+    border-radius: 30px;
+    width: 100%;
+    border: none;
+    backdrop-filter: blur(8px);
+    height: 30px;
+    padding: 5px;
+    margin: 10px 0;
+}
+
+.choice {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.choice:hover {
+    background-color: #555;
+}
+@media(max-width:800px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    .conteiner .card:hover .conteudo{
+        top:-50px;
+        height:250px;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
